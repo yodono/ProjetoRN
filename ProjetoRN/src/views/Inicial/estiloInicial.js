@@ -8,8 +8,7 @@ const estiloInicial = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',  
     },
-    borda: {   
-      backgroundColor: '#161616',  
+    borda: {    
       width: '80%',
       height: '90%',
       borderRadius: 10,
@@ -47,6 +46,16 @@ const estiloInicial = StyleSheet.create({
        justifyContent: 'flex-end',
        alignItems: 'center',
        padding: 10,
+   },
+   botaoBackgroundBorda: {
+    margin: 1.5,
+    width: 140,
+    height: 100,
+    borderRadius: 10,
+    paddingVertical: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'white',
    },
    botaoTexto: {
        fontSize: 18,

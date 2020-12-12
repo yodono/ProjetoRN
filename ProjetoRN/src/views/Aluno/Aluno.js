@@ -48,7 +48,7 @@ function Aluno({ navigation, route }) {
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 1 }}
             >
-            <View style={estiloAluno.borda}>
+            <LinearGradient start={{ x: 0, y: 0 }} end={{x: 1, y: 1 }} colors={['#161616', '#303030']} style={estiloAluno.borda}>
                 <View style={estiloAluno.campoContainer}>
                     <FontAwesome5 name="book" size={26} color="#F8F8FF"/>
                     <TextInput
@@ -99,7 +99,7 @@ function Aluno({ navigation, route }) {
                     </TouchableOpacity>
 
                 </View>
-            </View>
+            </LinearGradient>
             </LinearGradient>
         </View>
     )

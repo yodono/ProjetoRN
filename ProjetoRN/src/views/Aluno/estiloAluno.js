@@ -5,7 +5,6 @@ const estiloAluno = StyleSheet.create({
       flex: 1,  
    },
    borda: {   
-      backgroundColor: '#161616',  
       width: '80%',
       height: '85%',
       borderRadius: 10,

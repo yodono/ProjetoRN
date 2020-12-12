@@ -37,19 +37,43 @@ function Inicial({ navigation }) {
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 1 }}
             >
-                <View style={estiloInicial.borda}>
-                    <TouchableOpacity onPress={abrirAluno}>
-                        <ImageBackground source={require('../../../assets/imagens/btncolecao.jpg')} style={estiloInicial.botaoBackground}>
-                            <Text style={estiloInicial.botaoTexto}>Aluno</Text>
-                        </ImageBackground>
-                    </TouchableOpacity>
+                <LinearGradient start={{ x: 0, y: 0 }} end={{x: 1, y: 1 }} colors={['#161616', '#303030']} style={estiloInicial.borda}>
 
-                    <TouchableOpacity style={estiloInicial.botaoContainer} onPress={abrirPerfil}>
-                        <ImageBackground source={require('../../../assets/imagens/btnperfil.jpg')} style={estiloInicial.botaoBackground}>
-                            <Text style={estiloInicial.botaoTexto}>Perfil</Text>
-                        </ImageBackground>
-                    </TouchableOpacity>
-                </View>
+                    <LinearGradient
+                        start={{ x: 0, y: 0 }}
+                        end={{x: 1, y: 1 }}
+                        colors={['#5851DB', '#C13584', '#E1306C', '#FD1D1D', '#F77737']}
+                        style={{
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: 10,
+                        }}
+                    >
+                        <TouchableOpacity onPress={abrirAluno} style={estiloInicial.botaoBackgroundBorda}>
+                            <ImageBackground source={require('../../../assets/imagens/btncolecao.jpg')} style={estiloInicial.botaoBackground}>
+                                <Text style={estiloInicial.botaoTexto}>Aluno</Text>
+                            </ImageBackground>
+                        </TouchableOpacity>
+                    </LinearGradient>
+
+
+                    <LinearGradient
+                        start={{ x: 0, y: 0 }}
+                        end={{x: 1, y: 1 }}
+                        colors={['#5851DB', '#C13584', '#E1306C', '#FD1D1D', '#F77737']}
+                        style={{
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: 10,
+                        }}
+                    >
+                        <TouchableOpacity onPress={abrirPerfil} style={estiloInicial.botaoBackgroundBorda}>
+                            <ImageBackground source={require('../../../assets/imagens/btnperfil.jpg')} style={estiloInicial.botaoBackground}>
+                                <Text style={estiloInicial.botaoTexto}>Perfil</Text>
+                            </ImageBackground>
+                        </TouchableOpacity>
+                    </LinearGradient>
+                </LinearGradient>
             </LinearGradient>
         </View>
     )

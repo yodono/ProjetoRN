@@ -16,7 +16,7 @@ function Item({ navigation }) {
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 1 }}
             >
-            <View style={estiloItem.borda}>
+            <LinearGradient start={{ x: 0, y: 0 }} end={{x: 1, y: 1 }} colors={['#161616', '#303030']} style={estiloItem.borda}>
 
                 <Text style={estiloItem.texto}>Item</Text>
 
@@ -26,7 +26,7 @@ function Item({ navigation }) {
                     </LinearGradient>
                 </TouchableOpacity>
 
-            </View>
+            </LinearGradient>
         </LinearGradient>
     )
 }
