@@ -52,7 +52,7 @@ const estiloAluno = StyleSheet.create({
    },
    campo: {
       fontSize: 18,
-      color: 'black',
+      color: 'white',
       marginLeft: 40,    
       paddingBottom: 10,
       borderBottomWidth: 1,
