@@ -10,9 +10,9 @@ const Tab = createBottomTabNavigator();
 
 const icones = {
   Inicial: { name: 'home' },
-  Perfil: { name: 'storage' },
-  Item: { name: 'done-all' }, 
-  Aluno: { name: 'storage'},
+  Perfil: { name: 'people' },
+  Item: { name: 'book' }, 
+  Aluno: { name: 'person'},
 }
 
 const RotasTab = () => {
@@ -20,8 +20,8 @@ const RotasTab = () => {
     <Tab.Navigator
       tabBarOptions={
         {
-          style: {backgroundColor: '#081a31', borderTopColor: '#081a31'},
-          activeTintColor: '#FFFFFF',
+          style: {backgroundColor: '#FFFFFF'},
+          activeTintColor: '#E1306C',
           showLabel: false,
         }
       }
@@ -48,16 +48,16 @@ const RotasTab = () => {
         }}
       />      
       <Tab.Screen 
+      name="Aluno" 
+      component={Aluno} 
+      initialParams={{aluno: {}, operacao: 'adicionar'}} />
+      <Tab.Screen 
         name="Item" 
         component={Item} 
         options={{
           unmountOnBlur: true,
         }}
       />  
-      <Tab.Screen 
-      name="Aluno" 
-      component={Aluno} 
-      initialParams={{aluno: {}, operacao: 'adicionar'}} />
     </Tab.Navigator>
   );
 }

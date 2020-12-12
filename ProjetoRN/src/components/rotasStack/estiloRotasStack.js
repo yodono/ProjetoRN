@@ -5,13 +5,13 @@ const estiloRotasStack = StyleSheet.create({
       backgroundColor: '#000000'
     },
     screenInicial: {
-      backgroundColor: '#92afd7'
+      backgroundColor: '#FFFFFF'
     },
     screenColecao: {
-      backgroundColor: '#d0f4ea'
+      backgroundColor: '#FFFFFF'
     },
     screenItem: {
-      backgroundColor: '#d1d1d1'  
+      backgroundColor: '#FFFFFF'  
     }
 });
 

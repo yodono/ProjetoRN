@@ -38,7 +38,7 @@ function Aluno({ navigation, route }) {
                 <TouchableOpacity onPress={voltar}>
                     <MaterialIcons name="arrow-back" size={24} color="white"/>
                 </TouchableOpacity>
-                <Text style={estiloAluno.texto}>Item</Text>
+                <Text style={estiloAluno.texto}>Alunos</Text>
                 <Text></Text>
             </View>
 

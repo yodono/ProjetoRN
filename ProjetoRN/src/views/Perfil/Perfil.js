@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, TouchableOpacity, FlatList } from 'react-native';
+import { Text, View, TouchableOpacity, FlatList} from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import estiloPerfil from './estiloPerfil';
 import AlunoLista from '../../components/Lista/AlunoLista';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -41,23 +42,29 @@ function Perfil({ navigation }) {
 
             <View style={estiloPerfil.header}>
                 <TouchableOpacity onPress={voltar}>
-                    <MaterialIcons name="arrow-back" size={24} color="white" />
+                    <MaterialIcons name="arrow-back" size={24} color="black" />
                 </TouchableOpacity>
                 
                 <Text style={estiloPerfil.texto}>Perfil dos alunos</Text>
                 
                 <TouchableOpacity onPress={adicionar}>
-                    <MaterialIcons name="add" size={24} color="white" />
+                    <MaterialIcons name="add" size={24} color="black" />
                 </TouchableOpacity>
             </View>
 
-            <FlatList 
-                showsHorizontalScrollIndicator={false}
-                keyExtractor={(item) => item.id}
-                data={perfil}
-                renderItem={ ({item}) => <AlunoLista data={item} detalhe={() => editar(item)} />}
-            />
-
+            <LinearGradient
+                colors={['purple', 'white']}
+                style={estiloPerfil.container}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 1 }}
+            >
+                <FlatList 
+                    showsHorizontalScrollIndicator={false}
+                    keyExtractor={(item) => item.id}
+                    data={perfil}
+                    renderItem={ ({item}) => <AlunoLista data={item} detalhe={() => editar(item)} />}
+                />
+            </LinearGradient>
         </View>
     )
 }

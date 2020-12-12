@@ -32,7 +32,7 @@ const estiloLogin = StyleSheet.create({
    },
    texto: {
       fontSize: 20,
-      color: '#FFFFFF',
+      color: '#161616',
       fontWeight: 'bold',
       textAlign: "center",
       padding: 10
@@ -50,11 +50,11 @@ const estiloLogin = StyleSheet.create({
 
    campo: {
       fontSize: 18,
-      color: '#FFFFFF',
+      color: 'black',
       marginLeft: 40,    
       paddingBottom: 10,
       borderBottomWidth: 1,
-      borderColor: 'white',
+      borderColor: 'black',
     },
    botaoContainer: {
       marginTop: 20,

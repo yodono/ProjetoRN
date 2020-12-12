@@ -6,16 +6,17 @@ const estiloInicial = StyleSheet.create({
        header:{
        height: 40,
        width: '100%',
-       backgroundColor: '#14417b',
+       backgroundColor: '#FFFFFF',
        flexDirection: 'row',
        alignItems: "flex-end",
        padding: 5,
+       paddingLeft: 10,
    },
    fundo: {     
        width: '100%',
        height: '100%',
-       flexDirection: 'row',
        justifyContent: 'space-evenly',
+       paddingVertical: '55%',
        alignItems: 'center',
    },
    texto: {
@@ -33,8 +34,6 @@ const estiloInicial = StyleSheet.create({
        justifyContent: 'flex-end',
        alignItems: 'center',
        padding: 10,
-       borderWidth: 1,
-       borderColor: "#14417b",
    },
    botaoTexto: {
        fontSize: 18,

@@ -14,7 +14,7 @@ function Inicial({ navigation }) {
         }
     }
 
-    const abrirColecao = () => {
+    const abrirAluno = () => {
         navigation.navigate('Aluno')
     }
     
@@ -26,13 +26,13 @@ function Inicial({ navigation }) {
         <View style={estiloInicial.container}>
             <View style={estiloInicial.header}>
                 <TouchableOpacity onPress={exibirDrawer}>
-                    <AntDesign name='menu-fold' size={24} color='white' />
+                    <AntDesign name="ellipsis1" size={27} color="black" />
                 </TouchableOpacity>
             </View>
-            <ImageBackground source={require('../../../assets/imagens/background.jpg')} style={estiloInicial.fundo}>
-                    <TouchableOpacity onPress={abrirColecao}>
+            <ImageBackground source={require('../../../assets/imagens/background2.jpg')} style={estiloInicial.fundo}>
+                    <TouchableOpacity onPress={abrirAluno}>
                     <ImageBackground source={require('../../../assets/imagens/btncolecao.jpg')} style={estiloInicial.botaoBackground}>
-                        <Text style={estiloInicial.botaoTexto}>Coleção</Text>
+                        <Text style={estiloInicial.botaoTexto}>Aluno</Text>
                     </ImageBackground>
                     </TouchableOpacity>
                 <TouchableOpacity style={estiloInicial.botaoContainer} onPress={abrirPerfil}>

@@ -3,28 +3,25 @@ const estiloPerfil = StyleSheet.create({
    container: {   
       flex: 1,
    },
-       header:{
+   header:{
        height: 40,
        width: '100%',
-       backgroundColor: '#14417b',
+       backgroundColor: '#FFFFFF',
        flexDirection: 'row',
-       alignItems: "flex-end",
-       justifyContent: 'space-evenly',
+       justifyContent: 'space-between',
+       alignItems: 'stretch',
        padding: 5,
    },
    fundo: {     
       width: '100%',
       height: '100%',
-      flexDirection: 'row',
-      justifyContent: 'space-evenly',
       alignItems: 'center',
    },
    texto: {
       fontSize: 20,
-      color: '#FFFFFF',
+      color: 'black',
       fontWeight: 'bold',
       textAlign: "center",
-      padding: 10,
    },
       botaoBackground: {
       width: 140,
