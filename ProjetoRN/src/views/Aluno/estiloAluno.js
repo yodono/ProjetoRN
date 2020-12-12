@@ -2,12 +2,19 @@ import { StyleSheet } from 'react-native';
 
 const estiloAluno = StyleSheet.create({
    container: {   
-      flex: 1,
-      backgroundColor: '#d6fff3',   
+      flex: 1,  
+   },
+   borda: {   
+      backgroundColor: '#161616',  
+      width: '80%',
+      height: '85%',
+      borderRadius: 10,
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
    },
    header: {   
-      height: 50,
-      backgroundColor: '#14417b',
+      height: 40,
+      backgroundColor: '#FFFFFF',
       flexDirection: 'row',
       alignItems:'center',
       justifyContent: 'space-between',
@@ -15,21 +22,27 @@ const estiloAluno = StyleSheet.create({
    },
    formularioContainer: {
       flex: 1,
-      justifyContent:'center',
+      justifyContent: 'center',
+      alignItems: 'center', 
    },
     texto: {
       fontSize: 20,
-      color: '#FFFFFF',
+      color: 'white',
+      fontWeight: 'bold',
+   },
+   textoHeader: {
+      fontSize: 20,
+      color: 'black',
       fontWeight: 'bold',
    },
    campoContainer: {
-      flexDirection: 'row',
-      padding: 5,
-      paddingLeft: 50, 
-      paddingRight: 50, 
-      margin: 5, 
-      marginRight:50,
-      alignItems: 'center',
+        flexDirection: 'row',
+        padding: 10,
+        paddingLeft: 50,
+        paddingRight: 50,
+        margin: 10,
+        borderRadius: 5,
+        alignItems: 'center',
    },
    campoContainerDescricao: {
       flexDirection: 'row',
@@ -39,15 +52,12 @@ const estiloAluno = StyleSheet.create({
       margin: 5,
    },
    campo: {
-      width: '100%',
       fontSize: 18,
-      color: '#FFFFFF',
-      backgroundColor: '#4c669f',
-      marginLeft: 15, 
-      padding: 10, 
-      borderWidth: 1,
-      borderColor: '#192f6a',
-      borderRadius: 5, 
+      color: 'black',
+      marginLeft: 40,    
+      paddingBottom: 10,
+      borderBottomWidth: 1,
+      borderColor: '#F8F8FF',
    },
    campoDescricao:{
        width: '90%',
@@ -67,8 +77,8 @@ const estiloAluno = StyleSheet.create({
    },
    botoesContainer:{
        flexDirection: 'row',
-       justifyContent: 'flex-end',
-       paddingRight: 50,
+       justifyContent: 'center',
+       marginTop: 50,
    },
     botaoContainer: {
         alignItems: 'center',

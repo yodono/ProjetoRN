@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Text, View, TouchableOpacity, TextInput, ScrollView } from 'react-native';
+import { Text, View, TouchableOpacity, TextInput, ScrollView, ImageBackground } from 'react-native';
 import estiloAluno from './estiloAluno';
 import {MaterialIcons} from '@expo/vector-icons';
 import {FontAwesome5} from '@expo/vector-icons';
@@ -36,42 +36,47 @@ function Aluno({ navigation, route }) {
             <View style={estiloAluno.header}>
 
                 <TouchableOpacity onPress={voltar}>
-                    <MaterialIcons name="arrow-back" size={24} color="white"/>
+                    <MaterialIcons name="arrow-back" size={24} color="black"/>
                 </TouchableOpacity>
-                <Text style={estiloAluno.texto}>Alunos</Text>
+                <Text style={estiloAluno.textoHeader}>Registro de alunos</Text>
                 <Text></Text>
             </View>
 
-            <View style={estiloAluno.formularioContainer}>
-
+            <LinearGradient
+                colors={['#FFF0F5', '#F8F8FF']}
+                style={estiloAluno.formularioContainer}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 1 }}
+            >
+            <View style={estiloAluno.borda}>
                 <View style={estiloAluno.campoContainer}>
-                    <FontAwesome5 name="book" size={26} color="#192f6a"/>
+                    <FontAwesome5 name="book" size={26} color="#F8F8FF"/>
                     <TextInput
                         style={estiloAluno.campo}
                         placeholder="Nome"
-                        placeholderTextColor="#FFFFFF"
+                        placeholderTextColor="#F8F8FF"
                         onChangeText={nome => setAluno({...aluno, nome})}
                         value={aluno.nome}
                     />
                 </View>
 
                 <View style={estiloAluno.campoContainer}>
-                    <FontAwesome5 name="book-reader" size={26} color="#192f6a"/>
+                    <FontAwesome5 name="book-reader" size={26} color="#F8F8FF"/>
                     <TextInput
                         style={estiloAluno.campo}
                         placeholder="Sala"
-                        placeholderTextColor="#FFFFFF"
+                        placeholderTextColor="#F8F8FF"
                         onChangeText={sala => setAluno({...aluno, sala})}
                         value={aluno.sala}
                     />
                 </View>
 
                 <View style={estiloAluno.campoContainer}>
-                    <FontAwesome5 name="calendar-alt" size={26} color="#192f6a"/>
+                    <FontAwesome5 name="calendar-alt" size={26} color="#F8F8FF"/>
                     <TextInput
                         style={estiloAluno.campo}
                         placeholder="Turma"
-                        placeholderTextColor="#FFFFFF"
+                        placeholderTextColor="#F8F8FF"
                         keyboardType="numeric"
                         maxLength={4}
                         onChangeText={turma => setAluno({...aluno, turma})}
@@ -82,19 +87,20 @@ function Aluno({ navigation, route }) {
                 <View style={estiloAluno.botoesContainer}>
 
                     <TouchableOpacity onPress={() => salvar(aluno)} style={estiloAluno.botaoContainer}>
-                        <LinearGradient colors={['#4c669f', '#192f6a', '#081a31']} style={estiloAluno.botao}>
+                        <LinearGradient colors={['#5851DB', '#C13584', '#E1306C', '#FD1D1D', '#F77737']} style={estiloAluno.botao}>
                             <MaterialIcons name="save" size={28} color="white" />
                         </LinearGradient>
                     </TouchableOpacity>
 
                     <TouchableOpacity onPress={() => remover(aluno)} style={estiloAluno.botaoContainer}>
-                        <LinearGradient colors={['#4c669f', '#192f6a', '#081a31']} style={estiloAluno.botao}>
+                        <LinearGradient colors={['#5851DB', '#C13584', '#E1306C', '#FD1D1D', '#F77737']} style={estiloAluno.botao}>
                             <MaterialIcons name="delete" size={28} color="white" />
                         </LinearGradient>
                     </TouchableOpacity>
 
                 </View>
             </View>
+            </LinearGradient>
         </View>
     )
 }

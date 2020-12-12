@@ -53,7 +53,7 @@ function Perfil({ navigation }) {
             </View>
 
             <LinearGradient
-                colors={['purple', 'white']}
+                colors={['#FFF0F5', '#F8F8FF']}
                 style={estiloPerfil.container}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 1 }}

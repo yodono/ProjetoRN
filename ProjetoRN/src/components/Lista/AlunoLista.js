@@ -9,20 +9,10 @@ const AlunoLista = ({data, detalhe}) => {
     return (
         <TouchableOpacity style={estiloLista.areaItens} onPress={detalhe}>
 
-            <LinearGradient colors={['#14417b', '#92afd7', '#92afd7']}>
+            <LinearGradient start={{ x: 0, y: 0 }} end={{x: 1, y: 1 }} colors={['#161616', '#303030']} style={estiloLista.itens}>
                 <Text style={estiloLista.itemNome}> {aluno.nome} </Text>
+                <Text style={estiloLista.itemSubNome}> {aluno.sala} ({aluno.turma}) </Text>
             </LinearGradient>
-            <Text style={estiloLista.itemSubNome}> {aluno.sala} ({aluno.turma}) </Text>
-            
-            <LinearGradient colors={['#92afd7', '#92afd7', '#14417b']}>
-                <Text> </Text>
-                {/*(<Image 
-                    resizeMode='contain'
-                    style={estiloLista.itemFoto}
-                    source={item.foto}
-                />*/}
-            </LinearGradient>
-
         </TouchableOpacity>
     );
 }

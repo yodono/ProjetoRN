@@ -3,6 +3,19 @@ const estiloInicial = StyleSheet.create({
    container: {   
       flex: 1,
     },
+    fundo: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',  
+    },
+    borda: {   
+      backgroundColor: '#161616',  
+      width: '80%',
+      height: '90%',
+      borderRadius: 10,
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
+   },
        header:{
        height: 40,
        width: '100%',
